@@ -63,3 +63,14 @@ Start time: 10:15
 Finish time: 10:18
 
 Actual time needed to complete: 3 min
+
+
+Number and name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
