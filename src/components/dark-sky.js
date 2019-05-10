@@ -23,10 +23,10 @@ class DarkSky extends Component {
     }
 
     return(
-     <React.Fragment>
+      <div className="weather-container">
        <h3>Weather in {this.props.searchQuery} for the next 8 days</h3>
        {this.state.weatherData.map((day, index) => <WeatherList key={index} forecast={day.forecast} day={day.time}/>)}
-     </React.Fragment>
+     </div>
     );
   }
 }

@@ -10,22 +10,23 @@ class Yelp extends Component {
       restaurantData: []
     }
   }
-  getRestaurants = async (latitude, longitude) => {
+
+  getRestaurants = async () => {
     let restaurants = await superagent.get(`https://lit-mesa-34002.herokuapp.com/yelp/`)
-                 .query({data: {'latitude': latitude, 'longitude': longitude}} )
+                 .query({data: {'latitude': this.props.lat, 'longitude': this.props.long}} )
      let restaurantData = restaurants.body; 
      this.setState({restaurantData});
    }
    render() {
      if(this.props.lat && this.props.long) {
-       this.getRestaurants(this.props.lat, this.props.long);
+       this.getRestaurants();
      }
  
      return(
-      <React.Fragment>
+      <div className='restaurants-container'>
         <h3>Restaurants near {this.props.searchQuery}.</h3>
         {this.state.restaurantData.map((restaurant, index) => <RestaurantList key={index} restaurant={restaurant}/>)}
-      </React.Fragment>
+      </div>
      );
    }
 }

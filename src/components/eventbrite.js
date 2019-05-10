@@ -23,10 +23,10 @@ class EventBrite extends Component {
      }
  
      return(
-      <React.Fragment>
+      <div className="events-container">
         <h3>Events near {this.props.searchQuery} for the next 8 days</h3>
         {this.state.eventData.map((event, index) => <EventList key={index} event={event}/>)}
-      </React.Fragment>
+      </div>
      );
    }
 }
