@@ -18,16 +18,17 @@ class MovieDB extends Component {
      let moviesData = movies.body; 
      this.setState({moviesData});
    }
+
    render() {
      if(this.props.searchQuery) {
        this.getMovies();
      }
  
      return(
-      <React.Fragment>
+      <div className="movies-container">
         <h3>Movies filmed in {this.props.searchQuery}.</h3>
         {this.state.moviesData.map((movie, index) => <MovieList key={index} movie={movie}/>)}
-      </React.Fragment>
+      </div>
      );
    }
 }
