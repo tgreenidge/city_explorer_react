@@ -1,0 +1,29 @@
+.map img {
+  margin: 0 auto;
+}
+.movies-container, .events-container, .weather-container, .restaurants-contatiner {
+  width: 25%;
+  float: left;
+}
+
+.movies img {
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+.movies {
+  width: 90%;
+  margin: 15px auto;
+  border: 1px grey solid;
+  padding: 5px;
+}
+
+.movies span {
+  float: left;
+  padding: 10px;
+}
+
+.movies h4 {
+  clear: both;
+}
