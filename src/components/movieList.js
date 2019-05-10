@@ -6,9 +6,11 @@ class MovieList extends Component {
       <div className="movies">
         <a href={this.props.movie.url}><h4>{this.props.movie.title}</h4></a>
         <img src={this.props.movie.image_url} />
-        <p>Popularity: {this.props.movie.popularity}</p>
-        <p>Release Date: {this.props.movie.released_on}</p>
-        <p>Average Votes: {this.props.movie.average_votes}</p>
+        <span>
+          <p><strong>Popularity:</strong> {this.props.movie.popularity}</p>
+          <p><strong>Release Date:</strong> {this.props.movie.released_on}</p>
+          <p><strong>Average Votes:</strong> {this.props.movie.average_votes}</p>
+        </span>
         <h4>Overview</h4>
         <p>{this.props.movie.overview}</p>
       </div>
