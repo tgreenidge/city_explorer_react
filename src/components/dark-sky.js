@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import superagent from 'superagent';
-import WeatherList from './weather-list.js'
+import WeatherList from './weather-list.js';
 
 class DarkSky extends Component {
   constructor(props) {
